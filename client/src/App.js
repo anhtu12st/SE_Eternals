@@ -6,8 +6,7 @@ import {
   Route
 } from "react-router-dom";
 
-import HomePage from './pages/HomePage';
-import PaymentPage from './pages/PaymentPage';
+import { HomePage, PaymentPage } from './pages';
 
 const App = () => {
   return (
