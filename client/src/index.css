@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.over-item {
+    max-height: 324px;
+}
+.over-item::-webkit-scrollbar {
+    display: none;
+}
