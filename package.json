@@ -1,0 +1,23 @@
+{
+  "name": "SE_Eternals",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:anhtu12st/SE_Eternals.git",
+  "author": "anhtu12st <anhtu12st@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.1.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.2.6"
+  },
+  "pre-commit": "lint-staged",
+  "lint-staged": {
+    "client/src/**/*.{js,jsx,tsx,ts}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "prepare": "husky install"
+  }
+}

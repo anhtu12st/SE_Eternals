@@ -1,0 +1,24 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb"],
+  "plugins": ["react"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "exclude": [
+      "node_modules",
+      "build",
+      "dist",
+      "src/reportWebVitals.js"
+    ]
+  },
+  "rules": {
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-filename-extension": 0
+  }
+}
