@@ -1,8 +1,6 @@
 function formatMoney(x) {
-    x = x.toLocaleString('vi', { style: 'currency', currency: 'VND' });
-    return x;
+  return x.toLocaleString('vi', { style: 'currency', currency: 'VND' });
 }
-
 export const utils = {
-    formatMoney
-}
+  formatMoney,
+};
