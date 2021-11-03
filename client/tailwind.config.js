@@ -9,14 +9,12 @@ module.exports = {
         'white-3': '#5F5C5E',
         'brown-1': '#27110C',
         'brown-2': '#A7775C',
-        'brown-3': '#F6EFEF'
-
-
-      }
+        'brown-3': '#F6EFEF',
+      },
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
