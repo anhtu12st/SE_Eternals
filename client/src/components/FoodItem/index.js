@@ -9,38 +9,25 @@ function FoodItem(props) {
     title, imgUrl, description, price,
   } = props;
 
-  const [size, setSize] = useState(null);
-  const [mood, setMood] = useState(null);
-  const [ice, setIce] = useState(null);
-  const [sugar, setSugar] = useState(null);
+  const [option, setOption] = useState({
+    size: null,
+    mood: null,
+    ice: null,
+    sugar: null,
+  });
 
   const handleAddToCart = () => {
-    // console.log('click add to cart: ', {
-    //   size,
-    //   mood,
-    //   ice,
-    //   sugar,
-    // });
+    // console.log('click add to cart: ', option);
   };
 
-  const handleChooseRadio = (e) => {
-    const newValue = e.target.id;
-    switch (e.target.name) {
-      case 'mood': {
-        setMood(newValue);
-        break;
-      }
-      case 'ice': {
-        setIce(newValue);
-        break;
-      }
-      case 'sugar': {
-        setSugar(newValue);
-        break;
-      }
-      default:
-        setSize(newValue);
-    }
+  const handleChangeOption = (e) => {
+    const { name } = e.target;
+    const value = e.target.id;
+
+    setOption({
+      ...option,
+      [name]: value,
+    });
   };
 
   return (
@@ -52,10 +39,10 @@ function FoodItem(props) {
         price={price}
       />
       <div className="flex flex-row flex-wrap justify-between pt-5">
-        <ChooseMood mood={mood} onSetMood={handleChooseRadio} />
-        <ChooseSize size={size} onSetSize={handleChooseRadio} />
-        <ChooseIce ice={ice} onSetIce={handleChooseRadio} />
-        <ChooseSugar sugar={sugar} onSetSugar={handleChooseRadio} />
+        <ChooseMood mood={option.mood} onChangeOption={handleChangeOption} />
+        <ChooseSize size={option.size} onChangeOption={handleChangeOption} />
+        <ChooseIce ice={option.ice} onChangeOption={handleChangeOption} />
+        <ChooseSugar sugar={option.sugar} onChangeOption={handleChangeOption} />
       </div>
       <AddToCart
         onAddToCart={handleAddToCart}

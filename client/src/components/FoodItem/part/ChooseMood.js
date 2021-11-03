@@ -1,23 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styles/ChooseStyles.css';
 
 function ChooseMood(props) {
-  const { mood, onSetMood } = props;
+  const { mood, onChangeOption } = props;
 
   return (
     <div className="py-3">
       <div className="pl-1 font-bold">Mood</div>
-      <label htmlFor="mood-hot" className="inline-block p-1">
+      <label htmlFor="mood_hot" className="inline-block p-1">
         <input
           type="radio"
           name="mood"
           className="mood-input hidden"
-          id="mood-hot"
-          checked={mood === 'mood-hot'}
-          onChange={onSetMood}
+          id="mood_hot"
+          onChange={onChangeOption}
         />
-        <div className="w-9 h-9 rounded-full bg-brown-3 flex justify-center items-center">
+        <div className={`
+        w-9 h-9 rounded-full bg-brown-3 flex justify-center items-center
+        ${mood === 'mood_hot' ? 'border-solid border border-brown-4' : ''}
+        `}
+        >
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FireIcon.svg/1501px-FireIcon.svg.png"
             alt=""
@@ -25,16 +27,19 @@ function ChooseMood(props) {
           />
         </div>
       </label>
-      <label htmlFor="mood-cold" className="inline-block p-1">
+      <label htmlFor="mood_cold" className="inline-block p-1">
         <input
           type="radio"
           name="mood"
           className="mood-input hidden"
-          id="mood-cold"
-          checked={mood === 'mood-cold'}
-          onChange={onSetMood}
+          id="mood_cold"
+          onChange={onChangeOption}
         />
-        <div className="w-9 h-9 rounded-full bg-brown-3 flex justify-center items-center">
+        <div className={`
+        w-9 h-9 rounded-full bg-brown-3 flex justify-center items-center
+        ${mood === 'mood_cold' ? 'border-solid border border-brown-4' : ''}
+        `}
+        >
           <img
             src="https://icon-library.com/images/ice-icon/ice-icon-9.jpg"
             alt=""
@@ -48,12 +53,12 @@ function ChooseMood(props) {
 
 ChooseMood.propTypes = {
   mood: PropTypes.string,
-  onSetMood: PropTypes.func,
+  onChangeOption: PropTypes.func,
 };
 
 ChooseMood.defaultProps = {
   mood: null,
-  onSetMood: null,
+  onChangeOption: null,
 };
 
 export default ChooseMood;
