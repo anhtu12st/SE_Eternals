@@ -1,4 +1,4 @@
-import { Cart, Header, Navbar } from '../../components';
+import { Cart, Header, Navbar, FoodItem } from '../../components';
 
 const HomePage = () => (
   <div className="flex">
@@ -10,6 +10,7 @@ const HomePage = () => (
     </div> */}
     <div className="w-8/12 border-r-2">
       <Header />
+      <FoodItem />
     </div>
     <div className="w-3/12 border-r-2">
       <Cart />
