@@ -1,0 +1,15 @@
+.size-input:checked + div {
+  border: 1px solid #704332;
+}
+
+.ice-input:checked + div {
+  border: 1px solid #704332;
+}
+
+.sugar-input:checked + div {
+  border: 1px solid #704332;
+}
+
+.mood-input:checked + div {
+  border: 1px solid #704332;
+}
