@@ -1,9 +1,7 @@
-const PaymentPage = () => {
-	return (
-		<div>
-			PaymentPage
-		</div>
-	)
-}
+const PaymentPage = () => (
+  <div>
+    PaymentPage
+  </div>
+);
 
-export default PaymentPage
+export default PaymentPage;
