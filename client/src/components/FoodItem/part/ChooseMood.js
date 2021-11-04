@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function ChooseMood(props) {
-  const { mood, onChangeOption } = props;
-
+  const { id, mood, onChangeOption } = props;
   return (
     <div className="py-3">
       <div className="pl-1 font-bold">Mood</div>
-      <label htmlFor="mood_hot" className="inline-block p-1">
+      <label htmlFor={`${id}-mood_hot`} className="inline-block p-1">
         <input
           type="radio"
           name="mood"
           className="mood-input hidden"
-          id="mood_hot"
+          id={`${id}-mood_hot`}
+          value="mood_hot"
           onChange={onChangeOption}
         />
         <div className={`
@@ -27,12 +27,13 @@ function ChooseMood(props) {
           />
         </div>
       </label>
-      <label htmlFor="mood_cold" className="inline-block p-1">
+      <label htmlFor={`${id}-mood_cold`} className="inline-block p-1">
         <input
           type="radio"
           name="mood"
           className="mood-input hidden"
-          id="mood_cold"
+          id={`${id}-mood_cold`}
+          value="mood_cold"
           onChange={onChangeOption}
         />
         <div className={`
@@ -52,6 +53,7 @@ function ChooseMood(props) {
 }
 
 ChooseMood.propTypes = {
+  id: PropTypes.number.isRequired,
   mood: PropTypes.string,
   onChangeOption: PropTypes.func,
 };

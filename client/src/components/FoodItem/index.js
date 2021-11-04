@@ -8,11 +8,12 @@ import { cartActions } from '../../redux/cart/cartSlice';
 
 function FoodItem({ data }) {
   const {
-    title, imgUrl, description, price,
+    id, title, imgUrl, description, price,
   } = data;
 
   const dispatch = useDispatch();
   const [option, setOption] = useState({
+    id,
     size: null,
     mood: null,
     ice: null,
@@ -26,8 +27,7 @@ function FoodItem({ data }) {
   };
 
   const handleChangeOption = (e) => {
-    const { name } = e.target;
-    const value = e.target.id;
+    const { name, value } = e.target;
 
     setOption({
       ...option,
@@ -44,10 +44,10 @@ function FoodItem({ data }) {
         price={price}
       />
       <div className="flex flex-row flex-wrap justify-between pt-5">
-        <ChooseMood mood={option.mood} onChangeOption={handleChangeOption} />
-        <ChooseSize size={option.size} onChangeOption={handleChangeOption} />
-        <ChooseIce ice={option.ice} onChangeOption={handleChangeOption} />
-        <ChooseSugar sugar={option.sugar} onChangeOption={handleChangeOption} />
+        <ChooseMood id={option.id} mood={option.mood} onChangeOption={handleChangeOption} />
+        <ChooseSize id={option.id} size={option.size} onChangeOption={handleChangeOption} />
+        <ChooseIce id={option.id} ice={option.ice} onChangeOption={handleChangeOption} />
+        <ChooseSugar id={option.id} sugar={option.sugar} onChangeOption={handleChangeOption} />
       </div>
       <AddToCart
         onAddToCart={handleAddToCart}
