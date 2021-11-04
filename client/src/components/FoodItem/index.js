@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import {
   Header, AddToCart, ChooseSize, ChooseMood, ChooseIce, ChooseSugar,
 } from './part';
+import { cartActions } from '../../redux/cart/cartSlice';
 
-function FoodItem(props) {
+function FoodItem({ data }) {
   const {
     title, imgUrl, description, price,
-  } = props;
+  } = data;
 
+  const dispatch = useDispatch();
   const [option, setOption] = useState({
     size: null,
     mood: null,
@@ -17,7 +20,9 @@ function FoodItem(props) {
   });
 
   const handleAddToCart = () => {
-    // console.log('click add to cart: ', option);
+    dispatch(cartActions.addItem(
+      { ...data, quantity: 1 },
+    ));
   };
 
   const handleChangeOption = (e) => {
@@ -53,19 +58,18 @@ function FoodItem(props) {
 
 FoodItem.propTypes = {
   // category: PropTypes.string, // Some category: Drink, Pizza, Rice box, Cake, Sushi, Noodles,...
-  title: PropTypes.string,
-  imgUrl: PropTypes.string,
-  description: PropTypes.string,
-  price: PropTypes.number,
+  data: PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    imgUrl: PropTypes.string,
+    description: PropTypes.string,
+    price: PropTypes.number,
+  }),
 };
 
 FoodItem.defaultProps = {
   //   category: 'drink',
-  title: 'Caramel Frappuccino',
-  imgUrl:
-    'https://images.unsplash.com/photo-1627998792088-f8016b438988?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGZyYXBwdWNjaW5vfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-  description: 'Caramel syrup with coffee, milk, and whipped cream',
-  price: 20000,
+  data: {},
 };
 
 export default FoodItem;
