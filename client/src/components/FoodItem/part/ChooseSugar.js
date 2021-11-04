@@ -2,17 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function ChooseSugar(props) {
-  const { sugar, onChangeOption } = props;
+  const { id, sugar, onChangeOption } = props;
 
   return (
     <div className="py-3">
       <div className="pl-1 font-bold">Sugar</div>
-      <label htmlFor="sugar_30" className="inline-block p-1">
+      <label htmlFor={`${id}-sugar_30`} className="inline-block p-1">
         <input
           type="radio"
           name="sugar"
           className="sugar-input hidden"
-          id="sugar_30"
+          id={`${id}-sugar_30`}
+          value="sugar_30"
           onChange={onChangeOption}
         />
         <div className={`
@@ -23,12 +24,13 @@ function ChooseSugar(props) {
           <div className="font-bold text-xs text-yellow-500">30%</div>
         </div>
       </label>
-      <label htmlFor="sugar_50" className="inline-block p-1">
+      <label htmlFor={`${id}-sugar_50`} className="inline-block p-1">
         <input
           type="radio"
           name="sugar"
           className="sugar-input hidden"
-          id="sugar_50"
+          id={`${id}-sugar_50`}
+          value="sugar_50"
           onChange={onChangeOption}
         />
         <div className={`
@@ -39,12 +41,13 @@ function ChooseSugar(props) {
           <div className="font-bold text-xs text-brown-1">50%</div>
         </div>
       </label>
-      <label htmlFor="sugar_70" className="inline-block p-1">
+      <label htmlFor={`${id}-sugar_70`} className="inline-block p-1">
         <input
           type="radio"
           name="sugar"
           className="sugar-input hidden"
-          id="sugar_70"
+          id={`${id}-sugar_70`}
+          value="sugar_70"
           onChange={onChangeOption}
         />
         <div className={`
@@ -60,6 +63,7 @@ function ChooseSugar(props) {
 }
 
 ChooseSugar.propTypes = {
+  id: PropTypes.number.isRequired,
   sugar: PropTypes.string,
   onChangeOption: PropTypes.func,
 };

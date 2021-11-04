@@ -1,19 +1,21 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Item, Payment, Total } from './part';
-import data from './data';
 
 function Cart() {
+  const { items } = useSelector((state) => state.cart);
+
   return (
     <div className="pt-4 pb-6 px-10">
       <h2 className="text-2xl font-semibold">Bills</h2>
       <div className="overflow-auto over-item">
-        {data && data.map((item) => (
+        {items && items.map((item) => (
           <Item data={item} key={item.id} />
         ))}
       </div>
 
       <div className="mt-14">
-        <Total data={data} />
+        <Total />
       </div>
 
       <Payment />
