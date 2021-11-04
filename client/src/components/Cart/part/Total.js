@@ -20,7 +20,7 @@ function Total() {
       <div className="my-5 border-dashed border border-white-2" />
       <div className="flex justify-between text-lg font-medium">
         <span>Total</span>
-        <span>{formatMoney(totalPrice(items) + totalPrice(items) / 10)}</span>
+        <span>{formatMoney(totalPrice(items) + totalPrice(items) * 0.1)}</span>
       </div>
     </>
   );

@@ -1,10 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  totalItems: 0,
-  totalPrice: 0,
-  coupons: [],
-  tax: 0,
   items: [],
 };
 
@@ -18,7 +14,7 @@ export const cartSlice = createSlice({
     },
     updateQuantity(state, action) {
       const existingItem = state.items.find((item) => item.id === action.payload.id);
-      action.payload.status ? existingItem.quantity += 1 : existingItem.quantity -= 1;
+      action.payload.increase ? existingItem.quantity += 1 : existingItem.quantity -= 1;
     },
     removeItem(state, action) {
       const index = state.items.findIndex((item) => item.id === action.payload);
