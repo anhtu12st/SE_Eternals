@@ -18,18 +18,22 @@ const HomePage = () => {
       if (!openCart && e.initial[0] > 80 || e.velocity < 1) return;
 
       if (openCart) {
-        setOpenCart(false);
-      } else if (!openNavbar) {
-        setOpenNavbar(true);
+        return setOpenCart(false);
+      }
+
+      if (!openNavbar) {
+        return setOpenNavbar(true);
       }
     },
     onSwipedLeft: (e) => {
       if (!openNavbar && e.initial[0] < 300 || e.velocity < 1) return;
 
       if (openNavbar) {
-        setOpenNavbar(false);
-      } else if (!openCart) {
-        setOpenCart(true);
+        return setOpenNavbar(false);
+      }
+
+      if (!openCart) {
+        return setOpenCart(true);
       }
     },
   });
