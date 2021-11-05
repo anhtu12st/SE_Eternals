@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import FoodSlider from './FoodSlider';
 import SearchBox from './SearchBox';
+import { data } from '../../data';
 
 const Header = () => {
   const { category } = useSelector((state) => state.category);
@@ -19,7 +20,7 @@ const Header = () => {
 
       <div className="flex justify-between mb-8">
         <h2 className="text-2xl font-medium">{category.title}</h2>
-        <p className="text-white-2">12 Coffees Result</p>
+        <p className="text-white-2">{`${data[category.id - 1].items.length} Coffees Result`}</p>
       </div>
     </div>
   );
