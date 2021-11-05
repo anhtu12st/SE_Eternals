@@ -6,7 +6,7 @@ import {
 } from './part';
 import { cartActions } from '../../redux/cart/cartSlice';
 
-function FoodItem({ data }) {
+function FoodItem({ data, categoryId }) {
   const {
     id, title, imgUrl, description, price,
   } = data;
@@ -36,7 +36,7 @@ function FoodItem({ data }) {
   };
 
   return (
-    <div className="w-84 shadow rounded-xl p-5">
+    <div className="w-84 shadow-md rounded-xl p-5">
       <Header
         title={title}
         imgUrl={imgUrl}
@@ -44,10 +44,13 @@ function FoodItem({ data }) {
         price={price}
       />
       <div className="flex flex-row flex-wrap justify-between pt-5">
-        <ChooseMood id={option.id} mood={option.mood} onChangeOption={handleChangeOption} />
+        {categoryId === 1
+        && <ChooseMood id={option.id} mood={option.mood} onChangeOption={handleChangeOption} />}
         <ChooseSize id={option.id} size={option.size} onChangeOption={handleChangeOption} />
-        <ChooseIce id={option.id} ice={option.ice} onChangeOption={handleChangeOption} />
-        <ChooseSugar id={option.id} sugar={option.sugar} onChangeOption={handleChangeOption} />
+        {categoryId === 1
+        && <ChooseIce id={option.id} ice={option.ice} onChangeOption={handleChangeOption} />}
+        {categoryId === 1
+        && <ChooseSugar id={option.id} sugar={option.sugar} onChangeOption={handleChangeOption} />}
       </div>
       <AddToCart
         onAddToCart={handleAddToCart}
@@ -57,7 +60,7 @@ function FoodItem({ data }) {
 }
 
 FoodItem.propTypes = {
-  // category: PropTypes.string, // Some category: Drink, Pizza, Rice box, Cake, Sushi, Noodles,...
+  categoryId: PropTypes.number,
   data: PropTypes.shape({
     id: PropTypes.number,
     title: PropTypes.string,
@@ -68,7 +71,7 @@ FoodItem.propTypes = {
 };
 
 FoodItem.defaultProps = {
-  //   category: 'drink',
+  categoryId: 1,
   data: {},
 };
 
