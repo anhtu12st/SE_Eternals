@@ -15,7 +15,7 @@ const FoodItem = ({ imgUrl, title, id }) => {
       <button
         style={{ height: '150px', width: '150px' }}
         type="button"
-        className="flex flex-col items-center justify-center rounded-xl bg-white-1 text-2xl font-medium py-1 text-gray-900 hover:bg-brown-3 hover:text-brown-1 focus:bg-brown-3 focus:z-10 focus:ring-2 focus:ring-brown-1 focus:text-brown-1 my-2 mx-2"
+        className="flex flex-col items-center justify-center rounded-xl bg-white text-2xl font-medium py-1 text-gray-900 hover:bg-brown-3 hover:text-brown-1 focus:bg-brown-3 focus:z-10 focus:ring-2 focus:ring-brown-1 focus:text-brown-1 m-1 sm:m-2 border"
         id={id}
         onClick={handleChooseCategory}
       >

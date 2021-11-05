@@ -13,7 +13,7 @@ const buttons = [
 ];
 
 const Navbar = () => (
-  <div className="flex flex-col items-center">
+  <div className="flex flex-col items-center py-2">
     {buttons.map(({ id, title, icon }) => (
       <NavButton id={id} title={title} icon={icon} />
     ))}

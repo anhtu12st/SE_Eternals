@@ -36,7 +36,7 @@ function FoodItem({ data, categoryId }) {
   };
 
   return (
-    <div className="w-84 shadow-md rounded-xl p-5">
+    <div className="w-84 shadow rounded-xl p-5 m-3 bg-white">
       <Header
         title={title}
         imgUrl={imgUrl}

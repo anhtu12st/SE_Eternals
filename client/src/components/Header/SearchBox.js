@@ -5,7 +5,7 @@ const SearchBox = () => {
   const [searchText, setSearchText] = useState('');
 
   return (
-    <div className="flex justify-between items-center w-1/2 border-2 border-white-1 rounded-lg p-4">
+    <div className="flex flex-1 justify-between items-center sm:min-w-1/2 border-2 bg-white border-white-1 rounded-lg p-4">
       <input
         className="focus:outline-none"
         type="text"
