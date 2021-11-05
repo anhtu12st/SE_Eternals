@@ -4,8 +4,6 @@ import { GoTriangleLeft, GoTriangleRight } from 'react-icons/go';
 import FoodItem from './FoodItem';
 import data from './data';
 
-import './Arrow.css';
-
 export default class FoodSlider extends React.Component {
   render() {
     const settings = {
@@ -13,7 +11,7 @@ export default class FoodSlider extends React.Component {
       infinite: true,
       speed: 500,
       slidesToShow: 5,
-      slidesToScroll: 2,
+      slidesToScroll: 5,
       initialSlide: 0,
       responsive: [
         {
@@ -45,7 +43,7 @@ export default class FoodSlider extends React.Component {
     return (
       <div className="flex justify-center">
         <button type="button" onClick={() => this.slider.slickPrev()}>
-          <GoTriangleLeft className="svg_icons mr-5" />
+          <GoTriangleLeft className="transform scale-300 opacity-70 hover:opacity-100 mr-5" />
         </button>
         <div className="w-11/12">
           <Slider
@@ -66,7 +64,7 @@ export default class FoodSlider extends React.Component {
           </Slider>
         </div>
         <button type="button" onClick={() => this.slider.slickNext()}>
-          <GoTriangleRight className="svg_icons ml-5" />
+          <GoTriangleRight className="transform scale-300 opacity-70 hover:opacity-100 ml-5" />
         </button>
       </div>
     );

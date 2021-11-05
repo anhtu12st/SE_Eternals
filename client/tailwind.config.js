@@ -17,6 +17,9 @@ module.exports = {
         84: '21rem',
         96: '24rem',
       },
+      scale: {
+        300: '3',
+      },
     },
   },
   variants: {
