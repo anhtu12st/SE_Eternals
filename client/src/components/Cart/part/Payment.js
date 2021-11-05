@@ -4,9 +4,9 @@ import { GiWallet } from 'react-icons/gi';
 
 function Payment() {
   return (
-    <>
-      <h3 className="text-2xl font-semibold mt-8">Payment Method </h3>
-      <div className="mt-8 max-w-lg">
+    <div>
+      <h3 className="text-2xl font-semibold mt-6">Payment Method </h3>
+      <div className="mt-4 max-w-lg">
         <div className="grid grid-cols-3 shadow-sm gap-x-3 " role="group">
           <button
             type="button"
@@ -31,7 +31,7 @@ function Payment() {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
