@@ -11,14 +11,15 @@ module.exports = {
         'brown-2': '#A7775C',
         'brown-3': '#F6EFEF',
         'brown-4': '#704332',
-
       },
       spacing: {
         72: '18rem',
         84: '21rem',
         96: '24rem',
       },
-
+      scale: {
+        300: '3',
+      },
     },
   },
   variants: {
