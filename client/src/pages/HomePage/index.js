@@ -69,7 +69,7 @@ const HomePage = () => {
         <div className="w-full">
           <Header setOpenNavbar={setOpenNavbar} openNavbar={openNavbar} />
         </div>
-        <div className="w-full flex flex-row flex-wrap justify-center">
+        <div className="w-full flex flex-row justify-center flex-wrap">
           {data[category.id - 1].items.map((item) => (
             <FoodItem data={item} key={item.id} categoryId={category.id} />
           ))}

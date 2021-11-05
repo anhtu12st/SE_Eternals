@@ -59,7 +59,7 @@ export default class FoodSlider extends React.Component {
             responsive={settings.responsive}
           >
             {data.map(({ id, imgUrl, title }) => (
-              <FoodItem imgUrl={imgUrl} title={title} id={id} />
+              <FoodItem key={id} imgUrl={imgUrl} title={title} id={id} />
             ))}
           </Slider>
         </div>
