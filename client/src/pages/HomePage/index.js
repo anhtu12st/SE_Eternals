@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { FaShoppingCart } from 'react-icons/fa';
+import { HiOutlineShoppingBag } from "react-icons/hi";
 import { useSwipeable } from 'react-swipeable';
 import {
   Cart, FoodItem, Navbar, Header,
@@ -13,6 +14,7 @@ import { Fragment } from 'react';
 const HomePage = () => {
 
   const { category } = useSelector((state) => state.category);
+  const { items } = useSelector(state => state.cart)
   const [openNavbar, setOpenNavbar] = useState(false);
   const [openCart, setOpenCart] = useState(false);
   const handlers = useSwipeable({
@@ -55,12 +57,17 @@ const HomePage = () => {
         transform top-0 overflow-auto ease-in-out transition-all duration-300 z-30
       `}><Cart /></div>
 
-        <div
-          className="sm:hidden fixed right-4 bottom-4 p-3 focus:bg-transparent inline-block rounded-full bg-gradient-to-t"
-          onClick={() => (setOpenCart(!openCart))}
-        >
-          <FaShoppingCart fontSize={50} color='grey' />
-        </div>
+        {
+          items && items.length > 0 &&
+          <div
+            className="sm:hidden bg-gray-50 shadow-2xl animate-bounce
+           fixed right-4 bottom-4 p-3 focus:bg-transparent inline-block  bg-gradient-to-t"
+            onClick={() => (setOpenCart(!openCart))}
+          >
+            <HiOutlineShoppingBag fontSize={40} color='grey' />
+            <div className="absolute top-0 -right-1 bg-red-600 rounded-full h-3 w-3"></div>
+          </div>
+        }
 
         {(openNavbar || openCart) && (
           <div
