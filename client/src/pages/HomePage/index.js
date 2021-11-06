@@ -58,7 +58,7 @@ const HomePage = () => {
       `}><Cart /></div>
 
         {
-          items && items.length > 0 &&
+          items.length > 0 &&
           <div
             className="sm:hidden bg-gray-50 shadow-2xl animate-bounce
            fixed right-4 bottom-4 p-3 focus:bg-transparent inline-block  bg-gradient-to-t"
