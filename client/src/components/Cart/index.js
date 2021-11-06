@@ -6,7 +6,7 @@ function Cart() {
   const { items } = useSelector((state) => state.cart);
 
   return (
-    <div className="p-4 px-6 bg-white h-full flex-1 flex flex-col overflow-auto">
+    <div className="p-4 px-6 bg-white h-full w-full flex-1 flex flex-col overflow-auto">
       <div className="">
         <h2 className="text-1xl sm:text-2xl font-semibold">Bills</h2>
         <div className="overflow-auto over-item">

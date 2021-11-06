@@ -7,7 +7,7 @@ const SearchBox = () => {
   return (
     <div className="flex justify-between items-center sm:w-1/2 border-2 bg-white border-white-1 rounded-lg p-4">
       <input
-        className="focus:outline-none"
+        className="focus:outline-none w-1/2"
         type="text"
         placeholder="Search category or menu..."
         value={searchText}

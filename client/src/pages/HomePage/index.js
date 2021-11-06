@@ -53,7 +53,7 @@ const HomePage = () => {
       `}><Navbar /></div>
 
         <div className={`${openCart ? 'translate-x-0' : 'translate-x-full'} 
-        max-w-108 fixed h-screen right-0 sm:translate-x-0 sm:w-108 flex
+        w-full fixed h-screen right-0 sm:translate-x-0 sm:w-108 flex
         transform top-0 overflow-auto ease-in-out transition-all duration-300 z-30
       `}><Cart /></div>
 
