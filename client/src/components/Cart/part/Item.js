@@ -18,7 +18,7 @@ function Item({ data }) {
         <div className="flex justify-between">
           <p className="text-lg font-medium">{data.title}</p>
 
-          <span className="flex items-center justify-between px-2 text-xs font-semibold  rounded-xl bg-brown-3 text-brown-1 fon">
+          <span className="flex items-center justify-between px-2 text-xs font-semibold h-7  rounded-xl bg-brown-3 text-brown-1 fon">
             <BsFillPenFill className="mr-1" />
             {' '}
             Notes

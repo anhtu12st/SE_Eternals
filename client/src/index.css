@@ -1,12 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import '~slick-carousel/slick/slick.css';
-@import '~slick-carousel/slick/slick-theme.css';
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 .over-item {
   max-height: 324px;
 }
 .over-item::-webkit-scrollbar {
   display: none;
+}
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
