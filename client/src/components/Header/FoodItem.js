@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { categoryActions } from '../../redux/category/categorySlice';
+import { useHistory } from 'react-router-dom';
 
 const FoodItem = ({ imgUrl, title, id }) => {
-  const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleChooseCategory = () => {
-    dispatch(categoryActions.chooseCategory({ id, title }));
+    history.push(`/category/${title.toLowerCase()}`);
   };
 
   return (
