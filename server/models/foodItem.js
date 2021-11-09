@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const categories = ["Drink", 'Pizza', 'Hot pot', 'Cake', 'Sushi', 'Noodles', 'Rice box'];
+const categories = ["drink", 'pizza', 'hot pot', 'cake', 'sushi', 'noodles', 'rice box'];
 
 const foodItemSchema = new Schema(
 	{

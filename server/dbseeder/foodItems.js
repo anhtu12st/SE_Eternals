@@ -7,7 +7,7 @@ exports.foodItemData = [
 			'https://minio.thecoffeehouse.com/image/admin/caphe-suada--bacsiu_063797_400x400.jpg',
 		description: 'Caramel syrup with coffee, milk, and whipped cream',
 		price: 20000,
-		category: 'Drink'
+		category: 'drink'
 	},
   {
     title: 'Black Coffee',
@@ -15,7 +15,7 @@ exports.foodItemData = [
       'https://minio.thecoffeehouse.com/image/admin/cfdenda-espressoDa_647698.jpg',
     description: 'Caramel syrup with coffee, milk, and whipped cream',
     price: 10000,
-    category: 'Drink',
+    category: 'drink',
   },
   {
     title: 'Macchiato Black Tea',
@@ -23,7 +23,7 @@ exports.foodItemData = [
       'https://minio.thecoffeehouse.com/image/admin/tra-den-matchiato_430281.jpg',
     description: 'Caramel syrup with coffee, milk, and whipped cream',
     price: 15000,
-    category: 'Drink',
+    category: 'drink',
   },
   {
     title: 'Crushed Ice Cookie',
@@ -31,7 +31,7 @@ exports.foodItemData = [
       'https://minio.thecoffeehouse.com/image/admin/Chocolate-ice-blended_183602.jpg',
     description: 'Caramel syrup with coffee, milk, and whipped cream',
     price: 25000,
-    category: 'Drink',
+    category: 'drink',
   },
   {
     title: 'Peach Orange Lemongrass Tea',
@@ -39,7 +39,7 @@ exports.foodItemData = [
       'https://minio.thecoffeehouse.com/image/admin/tra-dao-cam-xa_668678.jpg',
     description: 'Caramel syrup with coffee, milk, and whipped cream',
     price: 15000,
-    category: 'Drink',
+    category: 'drink',
   },
   {
     title: 'Coca Plus',
@@ -47,7 +47,7 @@ exports.foodItemData = [
       'https://img.dominos.vn/coke-light.jpg',
     description: 'Caramel syrup with coffee, milk, and whipped cream',
     price: 15000,
-    category: 'Drink',
+    category: 'drink',
   },
 
   {
@@ -56,7 +56,7 @@ exports.foodItemData = [
       'https://img.dominos.vn/Surf-_-turf.jpg',
     description: 'Tomato Sauce, Cheese Sauce, Mozzarella Cheese',
     price: 100000,
-    category: 'Pizza',
+    category: 'pizza',
   },
   {
     title: 'Mexican Beef Pizza',
@@ -64,7 +64,7 @@ exports.foodItemData = [
       'https://img.dominos.vn/Prime-beef.jpg',
     description: 'Cheese Sauce, Tomato Sauce, Italian Beef Balls, Mexican Beef',
     price: 95000,
-    category: 'Pizza',
+    category: 'pizza',
   },
   {
     title: 'Mixed Vegetable Pizza',
@@ -72,7 +72,7 @@ exports.foodItemData = [
       'https://img.dominos.vn/Veggie-mania.jpg',
     description: 'Tomato Sauce Or Pesto Sauce, Mozzarella Cheese',
     price: 80000,
-    category: 'Pizza',
+    category: 'pizza',
   },
   {
     title: 'Singaporean Seafood Pizza',
@@ -80,7 +80,7 @@ exports.foodItemData = [
       'https://img.dominos.vn/Singapore-style-seafood.jpg',
     description: 'Singapore Spicy Sauce, Mozzarella Cheese, Shrimp, Crab Meat',
     price: 85000,
-    category: 'Pizza',
+    category: 'pizza',
   },
   {
     title: 'Half Half',
@@ -88,7 +88,7 @@ exports.foodItemData = [
       'https://img.dominos.vn/Haft-haft.jpg',
     description: 'Combination topping of Ocean Mania pizza and Cheesy Chicken Bacon pizza',
     price: 105000,
-    category: 'Pizza',
+    category: 'pizza',
   },
   {
     title: 'Premium Mixed Pizza',
@@ -96,7 +96,7 @@ exports.foodItemData = [
       'https://img.dominos.vn/Extravaganza.jpg',
     description: 'Tomato Sauce, Mozzarella Cheese, Pepperoni Sausage',
     price: 15000,
-    category: 'Pizza',
+    category: 'pizza',
   },
 
   {
@@ -105,7 +105,7 @@ exports.foodItemData = [
       'https://laungontainha.com/wp-content/uploads/2019/07/l%E1%BA%A9u-th%C3%A1i-b%E1%BA%AFp-b%C3%B2.jpg',
     description: 'Tomato Sauce, Cheese Sauce, Mozzarella Cheese',
     price: 300000,
-    category: 'Hot pot',
+    category: 'hot pot',
   },
   {
     title: 'SEAFOOD HOTPOT',
@@ -113,7 +113,7 @@ exports.foodItemData = [
       'https://laungontainha.com/wp-content/uploads/2018/11/l%E1%BA%A9u-th%C3%A1i-h%E1%BA%A3i-s%E1%BA%A3n.jpg',
     description: 'Cheese Sauce, Tomato Sauce, Italian Beef Balls, Mexican Beef',
     price: 200000,
-    category: 'Hot pot',
+    category: 'hot pot',
   },
   {
     title: 'THAI HOTPOT with rib cartilage',
@@ -121,7 +121,7 @@ exports.foodItemData = [
       'https://laungontainha.com/wp-content/uploads/2018/12/l%E1%BA%A9u-thai-b%C3%B2-m%E1%BB%B9-s%C6%B0%E1%BB%9Dn-s%E1%BB%A5n.jpg',
     description: 'Tomato Sauce Or Pesto Sauce, Mozzarella Cheese',
     price: 350000,
-    category: 'Hot pot',
+    category: 'hot pot',
   },
   {
     title: 'THAI MEAT HOTPOT',
@@ -129,7 +129,7 @@ exports.foodItemData = [
       'https://laungontainha.com/wp-content/uploads/2018/11/l%E1%BA%A9u-th%C3%A1i-b%C3%B2-m%E1%BB%B9-2.jpg',
     description: 'Singapore Spicy Sauce, Mozzarella Cheese, Shrimp, Crab Meat',
     price: 350000,
-    category: 'Hot pot',
+    category: 'hot pot',
   },
   {
     title: 'THAI MIXED BEEF HOTPOT',
@@ -137,7 +137,7 @@ exports.foodItemData = [
       'https://laungontainha.com/wp-content/uploads/2019/11/l%E1%BA%A9u-th%C3%A1i-b%C3%B2-th%E1%BA%ADp-c%E1%BA%A9m.jpg',
     description: 'Combination topping of Ocean Mania pizza and Cheesy Chicken Bacon pizza',
     price: 400000,
-    category: 'Hot pot',
+    category: 'hot pot',
   },
 
   {
@@ -146,7 +146,7 @@ exports.foodItemData = [
       'https://www.tljus.com/wp-content/uploads/2021/06/Potato.jpg',
     description: 'Tomato Sauce, Cheese Sauce, Mozzarella Cheese',
     price: 10000,
-    category: 'Cake',
+    category: 'cake',
   },
   {
     title: 'Honey Cheese Mochi Pancake',
@@ -154,7 +154,7 @@ exports.foodItemData = [
       'https://www.tljus.com/wp-content/uploads/2021/06/HoneyCheese.jpg',
     description: 'Cheese Sauce, Tomato Sauce, Italian Beef Balls, Mexican Beef',
     price: 9500,
-    category: 'Cake',
+    category: 'cake',
   },
   {
     title: 'Choco Cream Bread',
@@ -162,7 +162,7 @@ exports.foodItemData = [
       'https://www.tljus.com/wp-content/uploads/2021/08/ChocoCream.jpg',
     description: 'Tomato Sauce Or Pesto Sauce, Mozzarella Cheese',
     price: 80000,
-    category: 'Cake',
+    category: 'cake',
   },
 
   {
@@ -171,7 +171,7 @@ exports.foodItemData = [
       'https://alosushi.vn/images/ckeditor/images/sushi2.jpg  ',
     description: 'Tomato Sauce, Cheese Sauce, Mozzarella Cheese',
     price: 10000,
-    category: 'Sushi',
+    category: 'sushi',
   },
   {
     title: 'Chirashizushi',
@@ -179,7 +179,7 @@ exports.foodItemData = [
       'https://alosushi.vn/images/ckeditor/images/sushi3.jpg',
     description: 'Cheese Sauce, Tomato Sauce, Italian Beef Balls, Mexican Beef',
     price: 9500,
-    category: 'Sushi',
+    category: 'sushi',
   },
   {
     title: 'Gunkan',
@@ -187,7 +187,7 @@ exports.foodItemData = [
       'https://tokyodeli.com.vn/Data/Sites/3/Product/60/dynamite-tuna.png',
     description: 'Tomato Sauce Or Pesto Sauce, Mozzarella Cheese',
     price: 15000,
-    category: 'Sushi',
+    category: 'sushi',
   },
 
   {
@@ -196,7 +196,7 @@ exports.foodItemData = [
       'https://images.unsplash.com/photo-1552611052-33e04de081de?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHJhbWVufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
     description: 'Tomato Sauce, Cheese Sauce, Mozzarella Cheese',
     price: 50000,
-    category: 'Noodles',
+    category: 'noodles',
   },
   {
     title: 'Pho bo Viet Nam',
@@ -204,7 +204,7 @@ exports.foodItemData = [
       'https://media.istockphoto.com/photos/pho-bo-vietnamese-soup-with-beef-in-bowl-picture-id1028123408?b=1&k=20&m=1028123408&s=170667a&w=0&h=Z_xfTfjUnElue_qZGZRRbJj3Iob8AfuTBqW30GgGcsw=',
     description: 'Cheese Sauce, Tomato Sauce, Italian Beef Balls, Mexican Beef',
     price: 45000,
-    category: 'Noodles',
+    category: 'noodles',
   },
   {
     title: 'Shrimp Noodle',
@@ -212,7 +212,7 @@ exports.foodItemData = [
       'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80',
     description: 'Tomato Sauce Or Pesto Sauce, Mozzarella Cheese',
     price: 30000,
-    category: 'Noodles',
+    category: 'noodles',
   },
 
   {
@@ -221,7 +221,7 @@ exports.foodItemData = [
       'https://media.istockphoto.com/photos/chicken-teriyaki-lunch-box-picture-id157640627?b=1&k=20&m=157640627&s=170667a&w=0&h=wd1BYQUm5MJHBjCTywLAneWcbIfFbDl2lrasFFAdoMc=',
     description: 'Tomato Sauce, Cheese Sauce, Mozzarella Cheese',
     price: 50000,
-    category: 'Rice box',
+    category: 'rice box',
   },
   {
     title: 'Flushing fat chicken rice',
@@ -229,7 +229,7 @@ exports.foodItemData = [
       'https://images.foody.vn/res/g2/11349/prof/s280x175/image-3111762a-200910114155.jpeg',
     description: 'Cheese Sauce, Tomato Sauce, Italian Beef Balls, Mexican Beef',
     price: 45000,
-    category: 'Rice box',
+    category: 'rice box',
   },
   {
     title: 'Broken Rice',
@@ -237,6 +237,6 @@ exports.foodItemData = [
       'https://images.foody.vn/res/g100003/1000025178/prof/s280x175/file_restaurant_photo_hlsa_16227-419ffe3d-210603192150.jpg',
     description: 'Tomato Sauce Or Pesto Sauce, Mozzarella Cheese',
     price: 30000,
-    category: 'Rice box',
+    category: 'rice box',
   },
 ]
