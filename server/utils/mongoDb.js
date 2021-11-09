@@ -22,6 +22,9 @@ const connectToDatabase = (connectionString) => {
         cachedDb = db;
       })
       .then(() => cachedDb)
+      .catch(() => {
+        setTimeout(connectToDatabase, 3000);
+      })
   );
 };
 
