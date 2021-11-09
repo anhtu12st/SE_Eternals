@@ -2,8 +2,9 @@ const FoodItemModel = require('../models/foodItem');
 
 exports.getListFoodItems = async (req, res, next) => {
 	try {
-		const listFoodItems = await FoodItemModel.find();
-		listFoodItems += 1;
+		const { categoryId } = req.params;
+
+		const listFoodItems = await FoodItemModel.find({ category: [Number(categoryId)] });
 
 		res.json(listFoodItems);
 	} catch (err) {
