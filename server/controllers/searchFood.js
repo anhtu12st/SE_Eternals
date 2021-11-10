@@ -12,7 +12,11 @@ exports.searchFood = async (req, res, next) => {
       category: { $regex: searchText, $options: 'i' },
     });
 
-    let result = [...food, ...category];
+    const result = [
+      ...new Map(
+        [...food, ...category].map((item) => [item['title'], item])
+      ).values(),
+    ];
 
     res.json(result);
   } catch (err) {
