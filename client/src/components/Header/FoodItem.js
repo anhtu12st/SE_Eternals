@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { categoryActions } from '../../redux/category/categorySlice';
+import { searchActions } from '../../redux/search/searchSlice';
 
 const FoodItem = ({ imgUrl, title, id }) => {
   const dispatch = useDispatch();
 
   const handleChooseCategory = () => {
     dispatch(categoryActions.chooseCategory({ id, title }));
+    dispatch(searchActions.clearSearchData());
   };
 
   return (

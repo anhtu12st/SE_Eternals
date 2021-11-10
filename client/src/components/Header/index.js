@@ -10,6 +10,8 @@ const Header = () => {
   const dispatch = useDispatch();
   const openNavbar = useSelector((state) => state.global.openNavbar);
   const { category } = useSelector((state) => state.category);
+  const { searchText } = useSelector((state) => state.search);
+  const { foundItems } = useSelector((state) => state.search);
 
   return (
     <div className="pt-4 px-8">
@@ -26,8 +28,8 @@ const Header = () => {
       </div>
 
       <div className="flex justify-between items-center mb-8">
-        <h2 className="text-2xl font-medium">{category.title}</h2>
-        <p className="text-white-2">{`${data[category.id - 1].items.length} Results`}</p>
+        <h2 className="text-2xl font-medium">{searchText || category.title }</h2>
+        {searchText ? (<p className="text-white-2">{`${foundItems.length} Results`}</p>) : <p className="text-white-2">{`${data[category.id - 1].items.length} Results`}</p>}
       </div>
     </div>
   );
