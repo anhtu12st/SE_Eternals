@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { categoryActions } from '../../redux/category/categorySlice';
+import { searchActions } from '../../redux/search/searchSlice';
 
 const FoodItem = ({ imgUrl, title, id }) => {
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const handleChooseCategory = () => {
+    dispatch(categoryActions.chooseCategory({ id, title }));
+    dispatch(searchActions.clearSearchData());
     history.push(`/category/${title.toLowerCase()}`);
   };
 
