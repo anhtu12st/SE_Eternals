@@ -1,17 +1,41 @@
 /* eslint-disable */
-import { Fragment } from 'react';
-import { useSelector } from 'react-redux';
+import { Fragment, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
+import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { utils } from '../../helpers';
+import Axios from '../../services/Axios';
+
+const { getCategoryDetailByName } = utils;
 
 import { FoodItem, Header } from '../../components';
-import { data } from '../../data';
+import { foodItemActions } from '../../redux/foodItem/foodItemSlice';
+import { categoryActions } from '../../redux/category/categorySlice';
 
 const HomePage = () => {
-  const { category } = useSelector((state) => state.category);
+  const dispatch = useDispatch();
   const { items } = useSelector((state) => state.cart);
+  const { category } = useSelector((state) => state.category);
+  const foodItems = useSelector((state) => state.foodItem.items);
+  const { categoryName } = useParams();
   const { searchText } = useSelector((state) => state.search);
   const { foundItems } = useSelector((state) => state.search);
+
+  useEffect(() => {
+    const getNewFoodItemData = async () => {
+      try {
+        console.log(categoryName);
+        const { data } = await Axios.get(`/list-food-items/${categoryName.toLowerCase()}`);
+        dispatch(foodItemActions.setFoodItem(data));
+        dispatch(categoryActions.chooseCategory(getCategoryDetailByName(categoryName)));
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    getNewFoodItemData();
+  }, [categoryName]);
 
   return (
     <Fragment>
@@ -33,12 +57,15 @@ const HomePage = () => {
         </div>
 
         {searchText ? (
-          <div className="w-full flex flex-row justify-center flex-wrap"> {foundItems.map(item => (
-            <FoodItem data={item} key={item.id} categoryId={category.id} />
-          ))} </div>
+          <div className="w-full flex flex-row justify-center flex-wrap">
+            {' '}
+            {foundItems.map((item) => (
+              <FoodItem data={item} key={item.id} categoryId={category.id} />
+            ))}{' '}
+          </div>
         ) : (
           <div className="w-full flex flex-row justify-center flex-wrap">
-            {data[category.id - 1].items.map((item) => (
+            {foodItems.map((item) => (
               <FoodItem data={item} key={item.id} categoryId={category.id} />
             ))}
           </div>
