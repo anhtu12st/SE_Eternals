@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   items: [],
+  methodPayment: '',
 };
 
 export const cartSlice = createSlice({
@@ -19,6 +20,10 @@ export const cartSlice = createSlice({
     removeItem(state, action) {
       const index = state.items.findIndex((item) => item.id === action.payload);
       state.items.splice(index, 1);
+    },
+    chooseMethodPayment(state, action) {
+      // eslint-disable-next-line no-param-reassign
+      state.methodPayment = action.payload;
     },
 
   },
