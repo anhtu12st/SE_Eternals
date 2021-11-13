@@ -6,10 +6,6 @@ const NavButton = ({ id, title, icon }) => {
   const history = useHistory();
   const { pathname } = useLocation();
 
-  // console.log('Match: ', match);
-  // console.log('History: ', history);
-  // console.log('Location: ', pathname.slice(1));
-  // console.log('ID: ', id);
   const handleClickNavButton = () => {
     history.push(`/${title.toLowerCase()}`);
   };

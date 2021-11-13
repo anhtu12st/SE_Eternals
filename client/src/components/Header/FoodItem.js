@@ -11,9 +11,6 @@ const FoodItem = ({ imgUrl, title, id }) => {
   const { searchText } = useSelector((state) => state.search);
   const dispatch = useDispatch();
 
-  // console.log(categoryName);
-  // console.log(searchText);
-
   const handleChooseCategory = () => {
     dispatch(categoryActions.chooseCategory({ id, title }));
     dispatch(searchActions.clearSearchData());

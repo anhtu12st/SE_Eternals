@@ -11,8 +11,6 @@ function FoodItem({ data }) {
     id, category, title, imgUrl, description, price,
   } = data;
 
-  // console.log('FoodItem data: ', data);
-
   const dispatch = useDispatch();
   const [option, setOption] = useState({
     id,
