@@ -24,18 +24,22 @@ const routes = [
   {
     path: '/menu',
     component: ComingSoonPage,
+    isRequireLayout: true,
   },
   {
     path: '/wallet',
     component: ComingSoonPage,
+    isRequireLayout: true,
   },
   {
     path: '/history',
     component: ComingSoonPage,
+    isRequireLayout: true,
   },
   {
     path: '/promos',
     component: ComingSoonPage,
+    isRequireLayout: true,
   },
 ];
 
