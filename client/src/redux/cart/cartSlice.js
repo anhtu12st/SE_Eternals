@@ -25,6 +25,12 @@ export const cartSlice = createSlice({
       // eslint-disable-next-line no-param-reassign
       state.methodPayment = action.payload;
     },
+    initCart(state) {
+      // eslint-disable-next-line no-param-reassign
+      state.items = [];
+      // eslint-disable-next-line no-param-reassign
+      state.methodPayment = '';
+    },
 
   },
 });
