@@ -12,6 +12,8 @@ const { getCategoryDetailByName } = utils;
 import { FoodItem, Header } from '../../components';
 import { foodItemActions } from '../../redux/foodItem/foodItemSlice';
 import { categoryActions } from '../../redux/category/categorySlice';
+import { globalActions } from '../../redux/global/globalSlice';
+
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -21,6 +23,8 @@ const HomePage = () => {
   const { categoryName } = useParams();
   const { searchText } = useSelector((state) => state.search);
   const { foundItems } = useSelector((state) => state.search);
+  const openCart = useSelector((state) => state.global.openCart);
+
 
   useEffect(() => {
     const getNewFoodItemData = async () => {
@@ -42,9 +46,9 @@ const HomePage = () => {
       <Helmet title="Home Page" />
       {items.length > 0 && (
         <div
-          className="sm:hidden bg-gray-50 shadow-2xl animate-bounce
+          className="sm:hidden bg-gray-50 shadow-2xl animate-bounce rounded-lg
            fixed right-4 bottom-4 p-3 focus:bg-transparent inline-block  bg-gradient-to-t"
-          onClick={() => setOpenCart(!openCart)}
+          onClick={() => dispatch(globalActions.setOpenCart(!openCart))}
         >
           <HiOutlineShoppingBag fontSize={40} color="grey" />
           <div className="absolute top-0 -right-1 bg-red-600 rounded-full h-3 w-3"></div>
@@ -60,13 +64,13 @@ const HomePage = () => {
           <div className="w-full flex flex-row justify-center flex-wrap">
             {' '}
             {foundItems.map((item) => (
-              <FoodItem data={item} key={item.id} categoryId={category.id} />
+              <FoodItem data={item} key={item.id} categoryId={category.id} /> 
             ))}{' '}
           </div>
         ) : (
           <div className="w-full flex flex-row justify-center flex-wrap">
             {foodItems.map((item) => (
-              <FoodItem data={item} key={item.id} categoryId={category.id} />
+              <FoodItem data={item} key={item.id}/>
             ))}
           </div>
         )}

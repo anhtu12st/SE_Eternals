@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import store from './redux/store';
 
-import { HomePage, PaymentPage } from './pages';
+import { HomePage, PaymentPage, ComingSoonPage } from './pages';
 import Layout from './components/Layout';
 
 const routes = [
@@ -18,6 +18,22 @@ const routes = [
   {
     path: '/payment',
     component: PaymentPage,
+  },
+  {
+    path: '/menu',
+    component: ComingSoonPage,
+  },
+  {
+    path: '/wallet',
+    component: ComingSoonPage,
+  },
+  {
+    path: '/history',
+    component: ComingSoonPage,
+  },
+  {
+    path: '/promos',
+    component: ComingSoonPage,
   },
 ];
 
