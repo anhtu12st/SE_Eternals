@@ -14,10 +14,12 @@ const routes = [
   {
     path: '/category/:categoryName',
     component: HomePage,
+    isRequireLayout: true,
   },
   {
     path: '/payment',
     component: PaymentPage,
+    isRequireLayout: false,
   },
 ];
 
@@ -31,7 +33,11 @@ const App = () => (
             exact
             path={page.path}
             // eslint-disable-next-line react/jsx-props-no-spreading
-            render={(props) => (<Layout><page.component {...props} /></Layout>)}
+            render={(props) => (page.isRequireLayout
+              // eslint-disable-next-line react/jsx-props-no-spreading
+              ? (<Layout><page.component {...props} /></Layout>)
+              // eslint-disable-next-line react/jsx-props-no-spreading
+              : (<page.component {...props} />))}
           />
         ))}
         <Redirect to="/category/drink" />
