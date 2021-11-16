@@ -18,7 +18,7 @@ function InputField({
   return (
     <div>
       <div
-        className="f-outline px-2 relative border rounded-lg focus-within:border-brown-1 mt-10"
+        className="f-outline px-2 relative border rounded-lg focus-within:border-brown-1 mt-8 sm:mt-10"
       >
         <input
           value={value}

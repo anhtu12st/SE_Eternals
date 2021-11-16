@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { globalActions } from '../../redux/global/globalSlice';
 import { Item, Payment, Total } from './part';
 
 function Cart({ payment }) {
   const { items, methodPayment } = useSelector((state) => state.cart);
   const [showPopup, setShowPopup] = useState(false);
   const history = useHistory();
+  const dispatch = useDispatch();
   useEffect(() => {
     showPopup && setTimeout(() => {
       setShowPopup(false);
     }, 2000);
   }, [showPopup]);
   const handleRedirectPayment = () => {
-    methodPayment !== '' ? history.push('/payment') : setShowPopup(true);
+    if (methodPayment !== '') {
+      dispatch(globalActions.setInit());
+      return history.push('/payment');
+    }
+    return setShowPopup(true);
   };
   return (
     <>

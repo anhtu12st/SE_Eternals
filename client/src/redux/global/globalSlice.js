@@ -5,6 +5,7 @@ const initialState = {
   openNavbar: false,
   openCart: false,
   openFoodItemModal: false,
+  openCartPayment: false,
 };
 
 export const globalSlice = createSlice({
@@ -17,8 +18,14 @@ export const globalSlice = createSlice({
     setOpenCart(state, action) {
       state.openCart = action.payload;
     },
+    setOpenCartPayment(state, action) {
+      state.openCartPayment = action.payload;
+    },
     setOpenFoodItemModal(state, action) {
       state.openFoodItemModal = action.payload;
+    },
+    setInit() {
+      return initialState;
     },
   },
 });
