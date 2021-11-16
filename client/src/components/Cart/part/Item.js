@@ -33,7 +33,7 @@ function Item({ data }) {
                   <button
                     type="button"
                     className=" hover:bg-brown-2 active:bg-brown-2 rounded-full
-                    bg-brown-3 w-9 h-9 text-center leading-9 font-medium text-2xl"
+                    bg-brown-3 w-9 h-9 text-center leading-9 font-medium text-2xl flex items-center justify-center"
                     onClick={
                       () => dispatch(cartActions.updateQuantity({ id: data.id, status: false }))
                     }
@@ -59,7 +59,7 @@ function Item({ data }) {
             </span>
             <button
               type="button"
-              className=" hover:bg-brown-2 active:bg-brown-2 rounded-full bg-brown-3 w-9 h-9 text-center leading-9 font-medium text-2xl"
+              className=" hover:bg-brown-2 active:bg-brown-2 rounded-full bg-brown-3 w-9 h-9 text-center leading-9 font-medium text-2xl flex items-center justify-center"
               onClick={() => dispatch(cartActions.updateQuantity({ id: data.id, increase: true }))}
             >
               +

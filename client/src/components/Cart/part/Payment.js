@@ -21,7 +21,7 @@ function Payment() {
             type="button"
             className={
               `flex flex-col items-center justify-center rounded-xl bg-white-1 text-2xl font-medium  py-4 text-gray-900 hover:bg-brown-3 hover:text-brown-1 focus:bg-brown-3 focus:z-10 focus:ring-2 focus:ring-brown-1 focus:text-brown-1 ${methodPayment === 'cash' && 'text-brown-1 bg-brown-3 z-10 ring-2 ring-brown-1'}`
-}
+            }
             onClick={() => handleChooseMethod('cash')}
           >
             <BsCash />
@@ -31,7 +31,7 @@ function Payment() {
             type="button"
             className={
               `flex flex-col items-center justify-center rounded-xl bg-white-1 text-2xl font-medium  py-4 text-gray-900 hover:bg-brown-3 hover:text-brown-1 focus:bg-brown-3 focus:z-10 focus:ring-2 focus:ring-brown-1 focus:text-brown-1 ${methodPayment === 'debit-cash' && 'text-brown-1 bg-brown-3 z-10 ring-2 ring-brown-1'}`
-}
+            }
             onClick={() => handleChooseMethod('debit-cash')}
           >
             <BsFillCreditCard2BackFill />
@@ -41,7 +41,7 @@ function Payment() {
             type="button"
             className={
               `flex flex-col items-center justify-center rounded-xl bg-white-1 text-2xl font-medium  py-4 text-gray-900 hover:bg-brown-3 hover:text-brown-1 focus:bg-brown-3 focus:z-10 focus:ring-2 focus:ring-brown-1 focus:text-brown-1 ${methodPayment === 'e-wallet' && 'text-brown-1 bg-brown-3 z-10 ring-2 ring-brown-1'}`
-}
+            }
             onClick={() => handleChooseMethod('e-wallet')}
           >
             <GiWallet />

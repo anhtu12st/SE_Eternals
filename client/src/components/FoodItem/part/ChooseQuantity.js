@@ -15,7 +15,7 @@ const ChooseQuantity = (props) => {
       <div className="flex flex-row p-1">
         <button
           type="button"
-          className=" hover:bg-brown-2 active:bg-brown-2 rounded-full bg-brown-3 w-9 h-9 leading-9 font-medium text-2xl text-center"
+          className=" hover:bg-brown-2 active:bg-brown-2 rounded-full bg-brown-3 w-9 h-9 leading-9 font-medium text-2xl flex items-center justify-center"
           onClick={() => onChangeQuantity(-1)}
         >
           -
@@ -30,7 +30,7 @@ const ChooseQuantity = (props) => {
         />
         <button
           type="button"
-          className=" hover:bg-brown-2 active:bg-brown-2 rounded-full bg-brown-3 w-9 h-9 leading-9 font-medium text-2xl text-center"
+          className=" hover:bg-brown-2 active:bg-brown-2 rounded-full bg-brown-3 w-9 h-9 leading-9 font-medium text-2xl flex items-center justify-center"
           onClick={() => onChangeQuantity(1)}
         >
           +
