@@ -93,6 +93,12 @@ function FoodItem({ data }) {
                   {category[0] === 'drink'
                     && <ChooseSugar id={option.id} sugar={option.sugar} onChangeOption={handleChangeOption} />}
                   <ChooseQuantity id={option.id} quantity={option.quantity} onChangeOption={handleChangeOption} />
+                  <div className="py-3 col-span-2">
+                    <div className="pl-1 font-bold">Notes</div>
+                    <div>
+                    <input type="text" class="px-4 py-3 bg-gray-100 rounded-xl w-full" />
+                    </div>
+                  </div>
                 </div>
                 <AddToCart
                   onAddToCart={handleAddToCart}
