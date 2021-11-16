@@ -12,7 +12,7 @@ const ChooseQuantity = (props) => {
   return (
     <div className="py-3">
       <div className="pl-1 font-bold">Quantity</div>
-      <div className="flex flex-row">
+      <div className="flex flex-row p-1">
         <button
           type="button"
           className=" hover:bg-brown-2 active:bg-brown-2 rounded-full bg-brown-3 w-9 h-9 leading-9 font-medium text-2xl text-center"

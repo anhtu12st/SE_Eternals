@@ -104,9 +104,9 @@ function FoodItem({ data }) {
                   onAddToCart={handleAddToCart}
                 />
               </div>
-              <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+              <div className="flex items-center justify-end p-3 sm:p-8 border-t border-solid border-blueGray-200">
                 <button
-                  className="text-red-500 bg-gray-300 font-bold uppercase px-6 py-2 w-full text-center text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                  className="text-red-500 bg-gray-100 font-bold uppercase px-6 py-2 h-11 w-full text-center text-sm outline-none focus:outline-none rounded-xl"
                   type="button"
                   onClick={() => dispatch(globalActions.setOpenFoodItemModal(false))}
                 >

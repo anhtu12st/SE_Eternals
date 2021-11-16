@@ -12,7 +12,7 @@ export const cartSlice = createSlice({
     addItem(state, action) {
       const existingItem = state.items.find((item) => item.id === action.payload.id);
       // eslint-disable-next-line max-len
-      existingItem ? existingItem.quantity += action.payload.quantity : state.items.unshift(action.payload);
+      existingItem ? existingItem.quantity = Number(existingItem.quantity) + Number(action.payload.quantity) : state.items.unshift(action.payload);
     },
     updateQuantity(state, action) {
       const existingItem = state.items.find((item) => item.id === action.payload.id);
