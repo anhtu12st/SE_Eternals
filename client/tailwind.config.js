@@ -11,6 +11,7 @@ module.exports = {
         'brown-2': '#A7775C',
         'brown-3': '#F6EFEF',
         'brown-4': '#704332',
+        'black-0.25': '#00000040',
       },
       spacing: {
         72: '18rem',

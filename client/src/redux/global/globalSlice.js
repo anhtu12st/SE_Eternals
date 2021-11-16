@@ -4,6 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   openNavbar: false,
   openCart: false,
+  openFoodItemModal: false,
 };
 
 export const globalSlice = createSlice({
@@ -15,6 +16,9 @@ export const globalSlice = createSlice({
     },
     setOpenCart(state, action) {
       state.openCart = action.payload;
+    },
+    setOpenFoodItemModal(state, action) {
+      state.openFoodItemModal = action.payload;
     },
   },
 });

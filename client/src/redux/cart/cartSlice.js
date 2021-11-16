@@ -11,7 +11,8 @@ export const cartSlice = createSlice({
   reducers: {
     addItem(state, action) {
       const existingItem = state.items.find((item) => item.id === action.payload.id);
-      existingItem ? existingItem.quantity += 1 : state.items.unshift(action.payload);
+      // eslint-disable-next-line max-len
+      existingItem ? existingItem.quantity = Number(existingItem.quantity) + Number(action.payload.quantity) : state.items.unshift(action.payload);
     },
     updateQuantity(state, action) {
       const existingItem = state.items.find((item) => item.id === action.payload.id);
