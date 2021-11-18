@@ -73,8 +73,8 @@ const PaymentPage = () => {
   return (
     <Fragment>
       <Helmet title="Payment" />
-      <div {...handlers} className="sm:flex h-screen justify-center items-center gap-10">
-        <form onSubmit={handleSubmit(handleFormSubmit)} className=" bg-white h-full sm:h-5/6 sm:w-1/3 rounded-xl shadow-xl overflow-hidden p-6 flex flex-col justify-between">
+      <div {...handlers} className="min-h-screen sm:flex justify-center items-center gap-10">
+        <form onSubmit={handleSubmit(handleFormSubmit)} className=" bg-white min-h-screen sm:min-h-0 sm:w-1/3 rounded-xl shadow-xl overflow-hidden p-6 flex flex-col justify-between">
           <div>
             <h2 className="font-bold text-2xl  ">Payment Detail</h2>
             {error !== '' && <p className="text-center text-red-500 my-2 font-medium">{error}</p>}
@@ -155,7 +155,9 @@ const PaymentPage = () => {
         <div className={`${openCartPayment ? 'translate-x-0' : 'translate-x-full'} 
             w-full fixed h-screen right-0 sm:translate-x-0 sm:w-108 sm:static sm:h-5/6
             transform top-0 ease-in-out transition-all duration-300 z-30
-            `}><Cart payment /></div>
+            `}>
+          <Cart payment />
+        </div>
       </div>
     </Fragment>
   );

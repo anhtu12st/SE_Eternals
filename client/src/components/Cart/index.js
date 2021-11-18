@@ -45,7 +45,8 @@ function Cart({ payment }) {
               <button
                 type="button"
                 onClick={() => handleRedirectPayment()}
-                className="mt-6 w-full py-4 bg-brown-2 text-white-1 font-semibold rounded-lg shadow-md hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-brown-1 focus:ring-opacity-75"
+                className="mt-6 w-full py-4  text-white-1 font-semibold rounded-lg bg-brown-4 border-brown-3
+                hover:bg-brown-2 active:bg-brown-1 focus:ring-brown-1"
                 disabled={items.length <= 0}
               >
                 Prints Bill
